@@ -7,9 +7,9 @@ from Automator import Automator
 
 
 class Disassembler(Automator):
-    def __init__(self, t, key='z', confirm='tab'):
+    def __init__(self, delay=.85, key='z', confirm='tab'):
         super().__init__(
-            t,
+            delay,
             action=keyboard.press,
             action_args=(key,),
             stop=keyboard.release,

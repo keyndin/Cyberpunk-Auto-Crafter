@@ -9,9 +9,9 @@ from Automator import Automator
 
 
 class Crafter(Automator):
-    def __init__(self, t, x=0, y=0):
+    def __init__(self, delay=.85, x=0, y=0):
         super().__init__(
-            t,
+            delay,
             action=win32api.mouse_event,
             action_args=(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0),
             stop=win32api.mouse_event,
